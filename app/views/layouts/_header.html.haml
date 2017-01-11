@@ -1,0 +1,9 @@
+%header.navbar
+  %div.container
+    %a.logo{:href => "/home"}= image_tag('rocket-icon.png', size: 50)
+    %span.title
+      / %a{:href => "/home"} TWITTER
+    %ul.nav.navbar-nav.navbar-right.menu
+      %li= link_to 'Home', home_path
+      %li= link_to 'About', about_path
+      %li= link_to 'Log in', '#'
