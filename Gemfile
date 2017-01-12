@@ -10,6 +10,9 @@ gem 'sass-rails', '~> 5.0'
 gem 'sqlite3'
 gem 'uglifier', '>= 1.3.0'
 
+gem 'bootstrap-will_paginate'
+gem 'will_paginate'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks

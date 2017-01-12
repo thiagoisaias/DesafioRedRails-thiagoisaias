@@ -1,15 +1,17 @@
 /* Main Page, Header and Footer stylesheet */
 
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
 @import 'bootstrap';
 
 $font-lato: 'Lato', sans-serif;
+$font-open-sans: 'Open Sans', sans-serif;
 $header-color: #333333;
 
 html, body {
   margin: 0;
   padding: 0;
-  font-family: $font-lato;
+  font-family: $font-open-sans;
 }
 
 body {
@@ -24,6 +26,10 @@ body {
   text-align: center;
 }
 
+.btn-center {
+  width: 90px;
+  margin: 0 auto;
+}
 
 /* Header */
 
@@ -38,13 +44,19 @@ header {
     cursor: pointer;
     color: lightgray;
   }
+  line-height: 50px;
+}
+
+.title {
+  font-size: 20px;
+  letter-spacing: 1.25px;
 }
 
 .nav {
   li {
     a:hover, a:focus {
       background-color: $header-color;
-      color: #7792AB;
+      color: #A4A7A7;
     }
   }
 }
@@ -53,15 +65,10 @@ header {
   border-radius: 0px;
 }
 
-.menu {
-}
-
 .logo {
   margin-left: 10px;
 }
 
-.title{
-}
 
 /* Sign Up */
 

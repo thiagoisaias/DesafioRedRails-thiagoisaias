@@ -1,0 +1,10 @@
+%div.user-info
+  %h2
+    Hello, 
+    = @user.name
+  %div.btn-center
+    =link_to 'New Post', new_post_path , :class => "btn btn-default btn-primary"
+%div
+  - if @user.posts.any?
+    = render @posts
+    = will_paginate @posts

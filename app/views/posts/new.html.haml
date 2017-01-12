@@ -1,0 +1,6 @@
+%span New post for #{current_user.name}
+%div.post-form
+  = form_for :post do |f|
+    = f.text_area :content, placeholder: 'Write something..'
+    %br/
+    = f.submit 'Save', class: 'btn btn-primary'

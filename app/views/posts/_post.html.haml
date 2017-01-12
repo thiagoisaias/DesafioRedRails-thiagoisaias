@@ -1,0 +1,5 @@
+%div.panel.panel-default.user-posts
+  %p= post.content
+  %div.posted-time Posted #{time_ago_in_words(post.created_at)} ago.
+  - if current_user == post.user
+    = link_to 'delete', post , method: 'delete'
