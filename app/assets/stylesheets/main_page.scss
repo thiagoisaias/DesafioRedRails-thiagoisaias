@@ -33,40 +33,8 @@ a:hover {
 
 /* Header */
 
-header {
-  background-color: $header-color;
-  ul { 
-    list-style: none;
-    font-size: 15px;
-  }
-  a:link, a:visited, a:hover {
-    text-decoration: none;
-    cursor: pointer;
-    color: lightgray;
-  }
-  line-height: 50px;
-}
-
-.title {
-  font-size: 20px;
-  letter-spacing: 1.25px;
-}
-
-.nav {
-  li {
-    a:hover, a:focus {
-      background-color: $header-color;
-      color: #A4A7A7;
-    }
-  }
-}
-
 .navbar {
   border-radius: 0px;
-}
-
-.logo {
-  margin-left: 10px;
 }
 
 
