@@ -8,12 +8,28 @@ class PostsController < ApplicationController
       flash[:success] = 'Post created!'
       redirect_to current_user
     else
-      flash[:danger] = 'Something wrong happened'
+      flash[:danger] = @post.errors.full_messages
+      redirect_to new_post_path
+    end
+  end
+
+  def edit
+    @post = current_user.posts.find(params[:id])
+  end
+
+  def update
+    @post = current_user.posts.find(params[:id])
+    if @post.update(post_params)
+      flash[:success] = 'Post updated!'
+      redirect_to current_user
+    else
+      flash[:danger] = @post.errors.full_messages
+      redirect_to edit_post_path
     end
   end
 
   def destroy
-    @post = current_user.posts.find_by(id: params[:id])
+    @post = current_user.posts.find(params[:id])
     @post.destroy
     flash[:success] = 'Post deleted!'
     redirect_to current_user

@@ -5,6 +5,7 @@
       %a{:href => "/home"} RED ROCKET TWITTER
     %ul.nav.navbar-nav.navbar-right.menu
       %li= link_to 'Home', home_path
+      %li= link_to 'Users', users_path 
       %li= link_to 'About', about_path
       - if user_signed_in?
         %li.dropdown

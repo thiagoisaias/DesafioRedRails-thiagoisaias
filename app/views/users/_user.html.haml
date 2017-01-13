@@ -1,0 +1,4 @@
+%div.user-each.panel.panel-default
+  %h3= link_to user.name, user
+  %p.user-each-details= "Number of posts: #{user.posts.count}"
+  %p.user-each-details= "Created at: #{user.created_at}"

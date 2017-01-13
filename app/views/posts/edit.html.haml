@@ -1,0 +1,6 @@
+%h3.text-center Updating post
+%div.post-form
+  = form_for @post, method: :PUT do |f|
+    = f.text_area :content
+    %div.btn-center
+      = f.submit 'Save', class: 'btn btn-primary'

@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   resources :users , only: [:index, :show]
-  resources :posts , only: [:new, :destroy]
+  resources :posts , only: [:new, :destroy, :edit, :update]
   root 'static_pages#home'
 
   get '/home', to: 'static_pages#home'

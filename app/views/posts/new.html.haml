@@ -1,6 +1,6 @@
-%span New post for #{current_user.name}
+%h3.text-center #{current_user.name}'s new post
 %div.post-form
   = form_for :post do |f|
     = f.text_area :content, placeholder: 'Write something..'
-    %br/
-    = f.submit 'Save', class: 'btn btn-primary'
+    %div.btn-center
+      = f.submit 'Save', class: 'btn btn-primary'

@@ -14,10 +14,6 @@ html, body {
   font-family: $font-open-sans;
 }
 
-body {
-  /* Fix Bootstrap navbar-fixed-top */
-}
-
 .body-text {
   font-weight: lighter;
 }
@@ -29,6 +25,10 @@ body {
 .btn-center {
   width: 90px;
   margin: 0 auto;
+}
+
+a:hover {
+  text-decoration: none;
 }
 
 /* Header */
