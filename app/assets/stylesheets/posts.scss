@@ -10,6 +10,10 @@
   padding: 10px;
 }
 
+.post-content {
+  word-wrap: break-word;
+}
+
 .posted-time {
   font-size: 0.85em;
   color: #1F9F1F;
@@ -21,6 +25,7 @@
 
 .post-form {
   padding: 20px;
+  width: 70%;
   margin: 0 auto;
 }
 
@@ -33,5 +38,5 @@
 
 .feed {
   width: 70%;
-  margin: 0 auto;
+  margin: 30px auto;
 }

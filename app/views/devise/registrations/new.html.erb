@@ -5,13 +5,15 @@
     <%= devise_error_messages! %>
 
     <div class="field form-group">
-      <%= f.label :name %><br />
+      <%= f.label :name %>
       <%= f.text_field :name, class: "form-control",  autofocus: true %>
+      <small class="form-text text-muted">Name can't be blank.</small>
     </div>
 
     <div class="field form-group">
-      <%= f.label :email %><br />
+      <%= f.label :email %>
       <%= f.email_field :email, class: "form-control", autofocus: true %>
+      <small class="form-text text-muted">Email can't be blank.</small>
     </div>
 
     <div class="field form-group">

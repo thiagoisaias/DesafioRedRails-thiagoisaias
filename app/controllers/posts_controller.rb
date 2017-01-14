@@ -8,7 +8,7 @@ class PostsController < ApplicationController
     @post = current_user.posts.build(post_params)
     if @post.save
       flash[:success] = 'Post created!'
-      redirect_to current_user
+      redirect_to feed_path
     else
       flash[:danger] = @post.errors.full_messages
       redirect_to new_post_path

@@ -18,8 +18,15 @@ end
 
 users_list = User.all
 users_list.each do |user|
-  10.times do
+  3.times do
     content = Faker::StarWars.quote
     user.posts.create(content: content)
   end
 end
+
+users = User.all
+user = User.first
+following = users[1..10]
+followers = users[3..5]
+following.each { |followed| user.follow(followed) }
+followers.each { |follower| follower.follow(user) }

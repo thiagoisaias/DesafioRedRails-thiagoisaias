@@ -1,3 +1,4 @@
 %h1.text-center= "Hello, #{current_user.name}"
+= render :template => 'posts/new'
 %div.feed
   = render current_user.feed

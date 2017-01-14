@@ -8,13 +8,17 @@
         %span.badge= @user.following.count
         Followers:
         %span.badge= @user.followers.count
-    - if current_user == @user
-      %div.btn-center
-        =link_to 'New Post', new_post_path , :class => "btn btn-default btn-primary"
-    - else
+    / - if current_user == @user
+    /   %div.btn-center
+    /     =link_to 'New Post', new_post_path , :class => "btn btn-default btn-primary"
+    / - else
+    - unless current_user == @user
       %div.follow-btn.text-center
         = render 'follow_button', user: @user
   - if @user.posts.any?
     = render @posts
     %div.text-center
       = will_paginate @posts
+  - else
+    %div.alert.alert-warning
+      You don't have any posts.
