@@ -1,10 +1,13 @@
 %div.user-info
-  %h2
-    Hello, 
+  %h2.text-center
     = @user.name
-  %div.btn-center
-    =link_to 'New Post', new_post_path , :class => "btn btn-default btn-primary"
-%div
+  %div.user-btn
+    - if current_user == @user
+      %div.btn-center
+        =link_to 'New Post', new_post_path , :class => "btn btn-default btn-primary"
+    - else
+      %div.follow-btn.text-center
+        = render 'follow_button', user: @user
   - if @user.posts.any?
     = render @posts
     %div.text-center

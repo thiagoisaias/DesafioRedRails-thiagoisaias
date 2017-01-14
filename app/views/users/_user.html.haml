@@ -2,3 +2,17 @@
   %h3= link_to user.name, user
   %p.user-each-details= "Number of posts: #{user.posts.count}"
   %p.user-each-details= "Created at: #{user.created_at}"
+  %div.follow-btn
+    - unless current_user == user
+      / - if current_user.following? user
+      /   / Display unfollow button
+      /   / Relationship destroy action
+      /   = form_for(current_user.active_relationships.find_by(followed_id: user.id), html: { method: :delete }, remote: true) do |f|
+      /     = f.submit 'Unfollow', class: 'btn btn-warning'
+      / - else
+      /   / Display follow button
+      /   / Relationship create action
+      /   = form_for(current_user.active_relationships.build, remote: true) do |f|
+      /     %div= hidden_field_tag :followed_id, user.id
+      /     = f.submit 'Follow', class: 'btn btn-info'
+      = render 'follow_button', user: user
