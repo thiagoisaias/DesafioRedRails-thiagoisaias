@@ -3,6 +3,11 @@ class ApplicationController < ActionController::Base
 
   before_filter :configure_permitted_parameters, if: :devise_controller?
 
+  # Redirect after sign in
+  def after_sign_in_path_for(resource_or_scope)
+    feed_path
+  end
+  
   protected
   # Sanitizing inputs for sign up and account_update to add a :name field
   # Add custom field to Devise model (name)
