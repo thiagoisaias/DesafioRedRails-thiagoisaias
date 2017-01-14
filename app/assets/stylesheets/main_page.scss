@@ -18,9 +18,9 @@ html, body {
   font-weight: lighter;
 }
 
-.text-center {
-  text-align: center;
-}
+// .text-center {
+//   text-align: center;
+// }
 
 .btn-center {
   width: 90px;
@@ -29,6 +29,10 @@ html, body {
 
 a:hover {
   text-decoration: none;
+}
+
+.pagination {
+  margin: 0 auto;
 }
 
 /* Header */

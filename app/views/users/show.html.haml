@@ -7,4 +7,5 @@
 %div
   - if @user.posts.any?
     = render @posts
-    = will_paginate @posts
+    %div.text-center
+      = will_paginate @posts
