@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  include LoginHelper
+  before_action :login_redirect? , only: [:edit, :destroy]
   
   def new; end
 
@@ -35,9 +37,9 @@ class PostsController < ApplicationController
     redirect_to current_user
   end
 
-  # Strong Parameters to avoid mass assignment
   private
 
+  # Strong Parameters to avoid mass assignment
   def post_params
     params.require(:post).permit(:content)
   end
