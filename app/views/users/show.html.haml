@@ -2,6 +2,12 @@
   %h2.text-center
     = @user.name
   %div.user-btn
+    %div.user-stats.text-center
+      %span
+        Following:
+        %span.badge= @user.following.count
+        Followers:
+        %span.badge= @user.followers.count
     - if current_user == @user
       %div.btn-center
         =link_to 'New Post', new_post_path , :class => "btn btn-default btn-primary"

@@ -10,10 +10,16 @@
   margin: 20px auto;
 }
 
-.user-each-details {
+.user-btn {
+  margin: 10px;
+}
+
+.user-stats {
+  padding-bottom: 10px;
   font-size: 0.9em;
 }
 
-.user-btn {
-  margin: 10px;
+.user-each > .created-at {
+  color: #1F9F1F;
+  font-size: 0.9em;
 }

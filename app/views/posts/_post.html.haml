@@ -1,6 +1,9 @@
 %div.panel.panel-default.user-posts
   %p= post.content
-  %div.posted-time Posted #{time_ago_in_words(post.created_at)} ago.
+  %div.posted-by
+    Posted by
+    =link_to post.user.name, post.user
+  %div.posted-time= "Posted #{time_ago_in_words(post.created_at)} ago."
   - if current_user == post.user
     = link_to 'edit', edit_post_path(post)
     = link_to 'delete', post , method: 'delete'

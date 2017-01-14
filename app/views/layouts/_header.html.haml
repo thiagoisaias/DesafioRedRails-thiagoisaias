@@ -2,7 +2,7 @@
   %div.container
     %a{:href => "/home", :class => 'navbar-brand'} RED ROCKET TWITTER
     %ul.nav.navbar-nav.navbar-right
-      %li= link_to 'Feed', '#'
+      %li= link_to 'Feed', feed_path
       %li= link_to 'Users', users_path 
       %li= link_to 'About', about_path
       - if user_signed_in?
